@@ -21,12 +21,20 @@
 			git status 查看工作区的状态，只能查看工作区与暂存区
 			git add 文件名         ：把工作文件提交到暂存区 （git add . 提交所有）
 			git commit -m "注释"    ：把暂存区的文件放到版本库(把暂存区所有文件当做一个文件提交到版本库，是一个整体)
+			git commit -a -m "注释"   把工作区的文件提交到版本库
 			git log  查看版本库的状态
-			git diff 查看工作区与暂存区域的改变
-			git diff --cached 查看版本库与暂存区的区别
-			git 
-			 
+			git diff 查看工作区与版本区域的区别
+			git diff --cached 工作区与暂存区的区别
+			git diff master 查看暂存区和版本库的区别
+			git  reset --hard id :从版本库获取已经有的版本，
+			git reset HEAD 文件名       让暂存区的文件回到工作区
+			git commit -m "注释" --ament 
+			git rm -f 文件名    删除工作区和暂存区的文件
+			git rm --cached    只删除暂存区文件
+			git push origin master 推送到git网站上
+			
 		---->
+		<div class="box"></div>
 		<div class="box"></div>
 	</body>
 </html>
