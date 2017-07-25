@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ES6</title>
+	</head>
+	<body>
+		<ul>
+			<li>1111111111</li>
+			<li>222222222</li>
+			<li>3333333333333</li>
+			<li>444444444444</li>
+			<li>55555555555</li>
+		</ul>
+		<script type="text/javascript">
+			
+			
+			var lis = document.getElementsByTagName('li');
+			/*
+			 	let:声明变量
+			 		特点：
+			 		1、不会在预解析机制中变量名提升
+			 * 		2、在同一个作用域和代码块中变量名只能声明一次
+			 * 		3、只能在当前的代码块中起作用
+			 * 
+			 * const:声明一个变量
+			 * 		1、变量名不会提升
+			 * 		2、在同一个作用域和代码块中变量名只能声明一次
+			 * 		3、只能在当前的代码块中起作用
+			 * 		4、变量的值是一个常量，一经赋值就不能改变。如果赋的值是一个对象，改变对象的属性，值不会改变，但是如果
+			 * 			从新赋一个新对象就会报错。
+			 * 
+			 * 
+			 * 结构赋值：
+			 * 		数值赋值
+			 * 			例如：通过下标赋值
+			 * 			let [a,b] = [3,5]
+			 * 			console.log(a)//3
+			 * 
+			 * 		对象赋值
+			 * 			例如：通过属性赋值
+			 * 			let {name,age} = {name:'pl',age:22}
+			 * 			console.log(name)//pl
+			 * 
+			 * 
+			 * 箭头函数:
+			 * 		书写格式：()=>{}
+			 * 		let b = (num) =>{
+			 * 			console.log(num)///111
+			 * 		}
+			 * 		b(111)
+			 
+			 * 普通函数:
+			 * 		function fn(){//函数声明   在任何地方的可以调用
+			 * 			
+			 * 		}
+			 * 		
+			 * 		var a = function(){  //函数表达式    调用只能在函数下面
+			 * 			console.log(2)
+			 * 			return num*2;
+			 * 		}
+			 * 		var b =a(2)
+					console.log(b)
+					
+					let a = (num)=>num*2;// 函数返回值num*2
+					let b = a(2)
+					console.log(b)
+					
+					
+					
+			 * 
+			 * 函数默认值:
+			 * 		例如:
+			 * 		function fn(a=12,b){
+						console.log(a,b)
+					}
+					fn(1,5)//1,5
+					fn()//12
+					fn('')//空
+					fn(3)//3
+			 * 
+			 * 
+			 * 
+			 * 数组的新方法:
+			 * 		forEach() 遍历数组
+			 * 			例如：
+			 * 				var arr = [11,22,33]
+			 * 				arr.forEach(function(index,i){
+								console.log(i,index)
+							})
+							
+			 * 		Array.from()  把类数组转化成真数组    括号里面放的是转化的元素
+			 * 		
+			 * 		map() 遍历数组中的每一个数据,进行一系列的操作在返回出来
+			 * 		
+			 * 		filter() 过滤数组中的某个数据
+			 * 		some()	判断数组里里面是否有满足某个条件的数据，如果满足返回true，反之false。
+			 * */
+			
+			
+//			var a = 1;
+
+//			 let  a = 1;
+//			 let a = 2
+//			console.log(a)报错
+			
+//			let a =2;
+//			if(!('a' in window)){
+//				console.log(a)//2
+//			}
+//			
+//			for(let i=0;i<lis.length;i++){
+//				lis[i].onclick = function(){
+//					console.log(i)//点击谁打印出水的下标
+//				}
+//			}
+			
+			
+//			const b = {}
+//			b.name = 12;
+//			console.log(b)//12
+			
+//			const b = {age:22};
+//			b.age = 1;
+//			console.log(b) //1
+
+//			const b = {}
+//			b={}
+//			console.log(b)//报错
+
+//				let b = (num) =>{
+//			  		console.log(num)
+//			  	}
+//			 		b(111)
+
+//			 var a = function(num){
+//			 	console.log(2)
+//				return num*2;
+//			}
+//			var b =a(2)
+//			console.log(b)
+
+//			let a = (num)=>num*2;// 函数返回值num*2
+//			let b = a(2)
+//			console.log(b)
+			
+			
+			//函数默认值
+//			function fn(a=12,b){
+//				console.log(a,b)
+//			}
+//			fn(1,5)//1,5
+//			fn()//12
+//			fn('')//空
+//			fn(3)//3
+
+
+//		var arr = [22,33,44]
+//		for(var i =0;i<arr.length;i++){
+//			console.log(i,arr[i])
+//		}
+//			arr.forEach(function(index,i){
+//				console.log(i,index)
+//			})
+
+//		lis = Array.from(lis)//把类数组转化成真数组
+//		lis.forEach((item,i)=>{
+//			item.onclick = ()=>{
+//				console.log(item,i)
+//			}
+//		})
+//		console.log(lis)
+		
+		var arr = [2,3,4,5]
+		let box =arr.map(function(item,i){//
+//			console.log(item);
+			if(!(item ==2)){
+				return item;//不改变原数组，但返回的值2变成undefined
+			}
+		})
+		console.log(arr)
+		console.log(box)
+		
+		
+		
+		var arr1 = [10,12,24,2,4]
+		let box1 = arr1.filter(function(itme,index){
+			return itme !=12;//返回值12去除在外，不改变原数组
+		})
+		console.log(arr1)
+		console.log(box1)//
+
+
+		var arr2 = [1,4,5,6,7]
+		let a =arr2.some(function(item,i){//判断数组里里面是否有满足某个条件的数据，如果满足返回true，反之false。
+			return item == 6;
+		})
+		console.log(a)
+		
+		
+		
+		</script>
+	</body>
+</html>
